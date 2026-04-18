@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ibrizz Kitchen | Restaurant | Hotel | Events</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <img src="images/logo.png" alt="Ibrizz Kitchen Logo" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-name">IBRIZZ KITCHEN</span>
+        <span class="logo-sub">RESTAURANT & STAY</span>
+        <span class="logo-sub">Ramanathapuram</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <!-- TEXT LEFT -->
+    <div class="hero-text-left">
+      <p class="hero-script">Restaurant | Hotel Stay | Events & Catering – All in One Place</p>
+      <h1 class="hero-title">IBRIZZ KITCHEN</h1>
+      <div class="hero-divider"><span></span><i class="fas fa-utensils"></i><span></span></div>
+      <p class="hero-hours-label">Experience the Best Biryani and Hospitality in Ramanathapuram</p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+        <a href="menu.html" class="btn-primary">View Menu</a>
+        <a href="contact.html" class="btn-primary" style="background: transparent; border: 1px solid var(--primary-color);">Book Now</a>
+      </div>
+    </div>
+
+    <!-- 3D FOOD CAROUSEL -->
+    <div class="food-carousel-wrap">
+      <div class="food-carousel" id="foodCarousel">
+
+        <div class="food-slide" data-index="0">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=90" alt="Biryani"/>
+          </div>
+          <div class="food-deal-tag">HOT DEALS</div>
+          <div class="food-price-wrap">
+            <span class="food-price-old">₹450</span>
+            <span class="food-price-new">₹380</span>
+          </div>
+        </div>
+
+        <div class="food-slide" data-index="1">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=500&q=90" alt="Prawn"/>
+          </div>
+          <div class="food-deal-tag">HOT DEALS</div>
+          <div class="food-price-wrap">
+            <span class="food-price-old">₹620</span>
+            <span class="food-price-new">₹520</span>
+          </div>
+        </div>
+
+        <div class="food-slide" data-index="2">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=90" alt="Dessert"/>
+          </div>
+          <div class="food-deal-tag">HOT DEALS</div>
+          <div class="food-price-wrap">
+            <span class="food-price-old">₹220</span>
+            <span class="food-price-new">₹180</span>
+          </div>
+        </div>
+
+        <div class="food-slide" data-index="3">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=90" alt="Bowl"/>
+          </div>
+          <div class="food-deal-tag">HOT DEALS</div>
+          <div class="food-price-wrap">
+            <span class="food-price-old">₹320</span>
+            <span class="food-price-new">₹260</span>
+          </div>
+        </div>
+
+        <div class="food-slide" data-index="4">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=90" alt="Salad"/>
+          </div>
+          <div class="food-deal-tag">HOT DEALS</div>
+          <div class="food-price-wrap">
+            <span class="food-price-old">₹280</span>
+            <span class="food-price-new">₹220</span>
+          </div>
+        </div>
+
+        <div class="food-slide" data-index="5">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=90" alt="Spread"/>
+          </div>
+          <div class="food-deal-tag">HOT DEALS</div>
+          <div class="food-price-wrap">
+            <span class="food-price-old">₹500</span>
+            <span class="food-price-new">₹420</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DOTS -->
+      <div class="carousel-dots" id="carouselDots">
+        <span class="cdot" data-i="0"></span>
+        <span class="cdot" data-i="1"></span>
+        <span class="cdot" data-i="2"></span>
+        <span class="cdot" data-i="3"></span>
+        <span class="cdot" data-i="4"></span>
+        <span class="cdot" data-i="5"></span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="feature-item">
+      <i class="fas fa-utensils"></i>
+      <span>Authentic Flavors</span>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-bed"></i>
+      <span>Luxury Stay</span>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-glass-cheers"></i>
+      <span>Event Hosting</span>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-heart"></i>
+      <span>Family Friendly</span>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section-about">
+    <div class="about-image img-animate">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80" alt="About Ibrizz Kitchen"/>
+      <div class="about-badge">EST. 2018</div>
+    </div>
+    <div class="about-text">
+      <p class="section-script">Our Story</p>
+      <h2 class="section-title">WELCOME TO IBRIZZ KITCHEN</h2>
+      <div class="section-divider"></div>
+      <p>Ibrizz Kitchen is a well-known multi-cuisine restaurant in Ramanathapuram, offering a perfect blend of delicious food and quality hospitality. Established around 2018, we serve a wide variety of dishes including authentic South Indian meals, flavorful biryanis, Chinese cuisine, and grilled specialties.</p>
+      <p>Beyond dining, we also provide comfortable hotel accommodations, banquet halls for events, outdoor lawn spaces, and catering services. Whether you're visiting with family or planning a special occasion, we ensure a memorable experience.</p>
+      <a href="about.html" class="btn-outline">Read More</a>
+    </div>
+  </section>
+
+  <!-- MENU PREVIEW -->
+  <section class="section-menu">
+    <div class="section-header">
+      <p class="section-script">Our Specialties</p>
+      <h2 class="section-title">SIGNATURE DISHES</h2>
+      <div class="section-divider center"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80" alt="Biryani"/>
+          <div class="menu-tag">Chef's Special</div>
+        </div>
+        <div class="menu-card-body">
+          <h3>Hyderabadi Biryani</h3>
+          <p>Aromatic basmati rice layered with tender meat and exotic spices</p>
+          <span class="price">₹380</span>
+        </div>
+      </div>
+      <div class="menu-card featured">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=80" alt="Prawn"/>
+          <div class="menu-tag">Popular</div>
+        </div>
+        <div class="menu-card-body">
+          <h3>Coastal Prawn Curry</h3>
+          <p>Fresh prawns in rich coconut gravy with coastal spices</p>
+          <span class="price">₹520</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Dessert"/>
+          <div class="menu-tag">Dessert</div>
+        </div>
+        <div class="menu-card-body">
+          <h3>Double Ka Meetha</h3>
+          <p>Traditional Hyderabadi bread pudding with rabri and dry fruits</p>
+          <span class="price">₹180</span>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="menu.html" class="btn-primary">View Full Menu</a>
+    </div>
+  </section>
+
+  <!-- SPECIAL EVENTS -->
+  <section class="section-events">
+    <div class="events-image img-animate">
+      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80" alt="Special Events"/>
+    </div>
+    <div class="events-content">
+      <p class="section-script">Services</p>
+      <h2 class="section-title">OUR PREMIUM SERVICES</h2>
+      <div class="section-divider"></div>
+      <ul class="events-list">
+        <li><i class="fas fa-circle"></i> Restaurant Dining</li>
+        <li><i class="fas fa-circle"></i> Hotel Stay (AC Rooms)</li>
+        <li><i class="fas fa-circle"></i> Banquet Hall</li>
+        <li><i class="fas fa-circle"></i> Outdoor Lawn</li>
+        <li><i class="fas fa-circle"></i> Catering Services</li>
+        <li><i class="fas fa-circle"></i> Corporate Meetings</li>
+      </ul>
+      <p>Whether it's a casual meal or a grand celebration, we provide the perfect venue for your needs.</p>
+      <a href="contact.html" class="btn-outline">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- ELITE DINING BANNER -->
+  <section class="elite-banner">
+    <div class="elite-overlay"></div>
+    <div class="elite-content">
+      <p class="section-script light">Premium Experience</p>
+      <h2>EXCEPTIONAL SERVICE AWAITS</h2>
+      <div class="hero-divider"><span></span><i class="fas fa-utensils"></i><span></span></div>
+      <a href="contact.html" class="btn-primary">Reserve a Table</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="images/logo.png" alt="Ibrizz Kitchen Logo" class="logo-img">
+          <div class="logo-text">
+            <span class="logo-name">IBRIZZ KITCHEN</span>
+            <span class="logo-sub">RESTAURANT & STAY</span>
+            <span class="logo-sub">Ramanathapuram</span>
+          </div>
+        </div>
+        <p>Your one-stop destination for fine dining, comfortable stays, and memorable events in Ramanathapuram.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Ramanathapuram, Tamil Nadu, India</p>
+        <p><i class="fas fa-phone"></i> +91 [Your Phone Number]</p>
+        <p><i class="fas fa-envelope"></i> info@ibrizzkitchen.com</p>
+      </div>
+      <div class="footer-hours">
+        <h4>Opening Hours</h4>
+        <p>Lunch: 11:30 AM – 3:00 PM</p>
+        <p>Dinner: 7:00 PM – 11:00 PM</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ibrizz Kitchen. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
