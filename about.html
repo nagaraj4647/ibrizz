@@ -8,7 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-<body>
+<body class="loading">
+
+  <!-- CINEMATIC SPLASH SCREEN -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <h1 class="splash-logo">IBRIZZ</h1>
+    </div>
+  </div>
+
 
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
@@ -39,19 +47,68 @@
   </section>
 
   <!-- ABOUT MAIN -->
-  <section class="about-main">
+  <section class="about-main reveal-up">
     <div class="about-image img-animate">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="restaurant"/>
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80" alt="Ibrizz Kitchen Dining"/>
       <div class="about-badge">EST. 2018</div>
     </div>
-    <div class="about-text">
+    <div class="about-text glass-panel" style="z-index: 2; position: relative;">
       <p class="section-script">Who We Are</p>
-      <h2 class="section-title">ABOUT US</h2>
+      <h2 class="section-title text-gradient">UNFORGETTABLE FLAVORS</h2>
       <div class="section-divider"></div>
-      <p>Ibrizz Kitchen is a well-known multi-cuisine restaurant in Ramanathapuram, offering a perfect blend of delicious food and quality hospitality. Established around 2018, we serve a wide variety of dishes including authentic South Indian meals, flavorful biryanis, Chinese cuisine, and grilled specialties.</p>
-      <p>Beyond dining, we also provide comfortable hotel accommodations, banquet halls for events, outdoor lawn spaces, and catering services. Whether you're visiting with family or planning a special occasion, we ensure a memorable experience.</p>
+      <p class="delay-2">Ibrizz Kitchen is a well-known multi-cuisine restaurant in Ramanathapuram, offering a perfect blend of delicious food and quality hospitality. Established around 2018, we serve a wide variety of dishes including authentic South Indian meals, flavorful biryanis, Chinese cuisine, and grilled specialties.</p>
+      <p class="delay-3">Beyond dining, we also provide comfortable hotel accommodations, banquet halls for events, outdoor lawn spaces, and catering services. Whether you're visiting with family or planning a special occasion, we ensure a memorable experience.</p>
     </div>
   </section>
+
+  <!-- STORY TIMELINE -->
+  <section class="values-section" style="background: var(--dark);">
+    <div class="section-header reveal-up">
+      <p class="section-script">Our Journey</p>
+      <h2 class="section-title">CHRONICLES OF TASTE</h2>
+      <div class="section-divider center"></div>
+    </div>
+    <div class="timeline-container" style="max-width: 1000px; margin: 0 auto; padding: 40px 0;">
+      <div class="timeline-item reveal-up delay-1" style="display: flex; gap: 40px; margin-bottom: 60px; align-items: center;">
+        <div style="flex: 1; text-align: right;">
+          <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 2rem;">2018</h3>
+          <p>The beginning of our culinary journey in Ramanathapuram with a small, passionate team.</p>
+        </div>
+        <div style="width: 2px; height: 100px; background: var(--gold); position: relative;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--gold); position: absolute; top:0; left: -5px;"></div>
+        </div>
+        <div style="flex: 1;">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=80" alt="Opening" class="glass-panel" style="width: 100%; height: 150px; object-fit: cover;">
+        </div>
+      </div>
+      <div class="timeline-item reveal-up delay-2" style="display: flex; gap: 40px; margin-bottom: 60px; align-items: center; flex-direction: row-reverse;">
+        <div style="flex: 1; text-align: left;">
+          <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 2rem;">2021</h3>
+          <p>Expanded our services to include luxury AC rooms and banquet facilities for grand events.</p>
+        </div>
+        <div style="width: 2px; height: 100px; background: var(--gold); position: relative;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--gold); position: absolute; top:0; left: -5px;"></div>
+        </div>
+        <div style="flex: 1;">
+          <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=400&q=80" alt="Expansion" class="glass-panel" style="width: 100%; height: 150px; object-fit: cover;">
+        </div>
+      </div>
+      <div class="timeline-item reveal-up delay-3" style="display: flex; gap: 40px; align-items: center;">
+        <div style="flex: 1; text-align: right;">
+          <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 2rem;">TODAY</h3>
+          <p>Recognized as the premier destination for multi-cuisine excellence and hospitality in the region.</p>
+        </div>
+        <div style="width: 2px; height: 100px; background: var(--gold); position: relative;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--gold); position: absolute; top:0; left: -5px;"></div>
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--gold); position: absolute; bottom:0; left: -5px;"></div>
+        </div>
+        <div style="flex: 1;">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&q=80" alt="Today" class="glass-panel" style="width: 100%; height: 150px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- APPROACH -->
   <section class="approach-section">
@@ -68,35 +125,36 @@
   </section>
 
   <!-- VALUES -->
-  <section class="values-section">
-    <div class="section-header">
+  <section class="values-section" style="background: var(--dark-mid);">
+    <div class="section-header reveal-up">
       <p class="section-script">Why Choose Us</p>
-      <h2 class="section-title">OUR VALUES</h2>
+      <h2 class="section-title">OUR CORE VALUES</h2>
       <div class="section-divider center"></div>
     </div>
     <div class="values-grid">
-      <div class="value-card">
+      <div class="value-card glass-panel skew-hover reveal-up delay-1">
         <div class="value-icon"><i class="fas fa-utensils"></i></div>
-        <h3>Diverse Menu</h3>
+        <h3 class="text-gradient">Diverse Menu</h3>
         <p>Wide variety of delicious food options including South Indian, Chinese, and Biryani</p>
       </div>
-      <div class="value-card">
+      <div class="value-card glass-panel skew-hover reveal-up delay-2">
         <div class="value-icon"><i class="fas fa-bed"></i></div>
-        <h3>Comfortable Stay</h3>
+        <h3 class="text-gradient">Comfortable Stay</h3>
         <p>Relaxing and welcoming environment with well-maintained AC rooms</p>
       </div>
-      <div class="value-card">
+      <div class="value-card glass-panel skew-hover reveal-up delay-3">
         <div class="value-icon"><i class="fas fa-tags"></i></div>
-        <h3>Affordable Luxury</h3>
+        <h3 class="text-gradient">Affordable Luxury</h3>
         <p>Premium quality services and hosting solutions at affordable pricing for all</p>
       </div>
-      <div class="value-card">
+      <div class="value-card glass-panel skew-hover reveal-up delay-4">
         <div class="value-icon"><i class="fas fa-star"></i></div>
-        <h3>Quality First</h3>
+        <h3 class="text-gradient">Quality First</h3>
         <p>Dedicated to quality service and ensuring complete customer satisfaction</p>
       </div>
     </div>
   </section>
+
 
   <footer class="footer">
     <div class="footer-grid">
@@ -132,8 +190,8 @@
         <p>Lunch: 11:30 AM – 3:00 PM</p>
         <p>Dinner: 7:00 PM – 11:00 PM</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/ibrizzkitchen/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ibrizzkitchen/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>

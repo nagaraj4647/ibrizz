@@ -8,7 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-<body>
+<body class="loading">
+
+  <!-- CINEMATIC SPLASH SCREEN -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <h1 class="splash-logo">IBRIZZ</h1>
+    </div>
+  </div>
+
 
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
@@ -52,282 +60,282 @@
     <div class="tab-content active" id="starters">
       <p class="tab-description">"Crispy and juicy starters perfect to begin your meal."</p>
       <div class="menu-list">
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Chicken 65</h4>
-              <p>Crispy deep-fried chicken with red chili and curry leaves</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-1">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=300&q=80" alt="Chicken 65">
           </div>
-          <span class="menu-price">₹280</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Chicken 65</h4>
+              <span class="menu-price">₹280</span>
+            </div>
+            <p>Crispy deep-fried chicken with red chili and curry leaves</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Mutton Seekh Kebab</h4>
-              <p>Minced lamb kebabs grilled on charcoal with mint chutney</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-2">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1601356616077-695728ecf769?w=300&q=80" alt="Mutton Seekh Kebab">
           </div>
-          <span class="menu-price">₹380</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Mutton Seekh Kebab</h4>
+              <span class="menu-price">₹380</span>
+            </div>
+            <p>Minced lamb kebabs grilled on charcoal with mint chutney</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Paneer Tikka</h4>
-              <p>Marinated cottage cheese grilled with bell peppers</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-3">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=300&q=80" alt="Paneer Tikka">
           </div>
-          <span class="menu-price">₹260</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Paneer Tikka</h4>
+              <span class="menu-price">₹260</span>
+            </div>
+            <p>Marinated cottage cheese grilled with bell peppers</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Prawn Tempura</h4>
-              <p>Crispy battered prawns with wasabi mayo dip</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-4">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=300&q=80" alt="Prawn Tempura">
           </div>
-          <span class="menu-price">₹420</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Prawn Tempura</h4>
+              <span class="menu-price">₹420</span>
+            </div>
+            <p>Crispy battered prawns with wasabi mayo dip</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Veg Samosa Chaat</h4>
-              <p>Crispy samosas topped with chutneys and yogurt</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-5">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&q=80" alt="Veg Samosa Chaat">
           </div>
-          <span class="menu-price">₹180</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Veg Samosa Chaat</h4>
+              <span class="menu-price">₹180</span>
+            </div>
+            <p>Crispy samosas topped with chutneys and yogurt</p>
+          </div>
         </div>
       </div>
+
     </div>
 
     <!-- MAINS -->
     <div class="tab-content" id="mains">
       <p class="tab-description">"Rich and creamy gravies cooked to perfection."</p>
       <div class="menu-list">
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Butter Chicken</h4>
-              <p>Tender chicken in creamy tomato-butter sauce</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-1">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=300&q=80" alt="Butter Chicken">
           </div>
-          <span class="menu-price">₹380</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Butter Chicken</h4>
+              <span class="menu-price">₹380</span>
+            </div>
+            <p>Tender chicken in creamy tomato-butter sauce</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Andhra Chicken Curry</h4>
-              <p>Fiery traditional Andhra-style chicken curry</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-2">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1631515223360-5d92d77a51d8?w=300&q=80" alt="Andhra Chicken Curry">
           </div>
-          <span class="menu-price">₹360</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Andhra Chicken</h4>
+              <span class="menu-price">₹360</span>
+            </div>
+            <p>Fiery traditional Andhra-style chicken curry</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Mutton Rogan Josh</h4>
-              <p>Slow-cooked mutton in aromatic Kashmiri spices</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-3">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1545243101-da93ca0d7b27?w=300&q=80" alt="Mutton Rogan Josh">
           </div>
-          <span class="menu-price">₹480</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Mutton Rogan Josh</h4>
+              <span class="menu-price">₹480</span>
+            </div>
+            <p>Slow-cooked mutton in aromatic Kashmiri spices</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Dal Makhani</h4>
-              <p>Slow-cooked black lentils in butter and cream</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-4">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1585445490387-f47934b73b54?w=300&q=80" alt="Dal Makhani">
           </div>
-          <span class="menu-price">₹240</span>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Chettinad Veg Curry</h4>
-              <p>Aromatic vegetables in Chettinad spice blend</p>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Dal Makhani</h4>
+              <span class="menu-price">₹240</span>
             </div>
+            <p>Slow-cooked black lentils in butter and cream</p>
           </div>
-          <span class="menu-price">₹260</span>
         </div>
       </div>
+
     </div>
 
     <!-- BIRYANI -->
     <div class="tab-content" id="biryani">
       <p class="tab-description">"Aromatic and flavorful biryanis made with premium ingredients and traditional spices."</p>
       <div class="menu-list">
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Hyderabadi Chicken Biryani</h4>
-              <p>Dum-cooked aromatic rice with tender chicken</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-1">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=300&q=80" alt="Chicken Biryani">
           </div>
-          <span class="menu-price">₹380</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Chicken Biryani</h4>
+              <span class="menu-price">₹380</span>
+            </div>
+            <p>Dum-cooked aromatic rice with tender chicken</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Mutton Biryani</h4>
-              <p>Slow-cooked basmati with succulent mutton pieces</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-2">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=300&q=80" alt="Mutton Biryani">
           </div>
-          <span class="menu-price">₹460</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Mutton Biryani</h4>
+              <span class="menu-price">₹460</span>
+            </div>
+            <p>Slow-cooked basmati with succulent mutton pieces</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Prawn Biryani</h4>
-              <p>Coastal-style biryani with fresh prawns</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-3">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=300&q=80" alt="Veg Dum Biryani">
           </div>
-          <span class="menu-price">₹520</span>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Veg Dum Biryani</h4>
-              <p>Fragrant basmati with seasonal vegetables and saffron</p>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Veg Dum Biryani</h4>
+              <span class="menu-price">₹280</span>
             </div>
+            <p>Fragrant basmati with seasonal vegetables and saffron</p>
           </div>
-          <span class="menu-price">₹280</span>
         </div>
       </div>
+
     </div>
 
     <!-- SOUTH INDIAN -->
     <div class="tab-content" id="southindian">
       <p class="tab-description">"Authentic meals and regional dishes prepared with rich local flavors."</p>
       <div class="menu-list">
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Coastal Prawn Curry</h4>
-              <p>Fresh prawns in rich coconut gravy</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-1">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=300&q=80" alt="Coastal Prawn Curry">
           </div>
-          <span class="menu-price">₹520</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Coastal Prawn</h4>
+              <span class="menu-price">₹520</span>
+            </div>
+            <p>Fresh prawns in rich coconut gravy with coastal spices</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Fish Fry (Pomfret)</h4>
-              <p>Whole pomfret marinated and pan-fried crispy</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-2">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1589187151003-0dd3c8e91cd9?w=300&q=80" alt="Fish Fry">
           </div>
-          <span class="menu-price">₹580</span>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon non-veg">●</span>
-            <div>
-              <h4>Crab Masala</h4>
-              <p>Whole crab in spicy Andhra masala</p>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon non-veg">●</span>
+              <h4 class="text-gradient">Fish Fry (Pomfret)</h4>
+              <span class="menu-price">₹580</span>
             </div>
+            <p>Whole pomfret marinated and pan-fried crispy</p>
           </div>
-          <span class="menu-price">₹680</span>
         </div>
       </div>
+
     </div>
 
     <!-- CHINESE & FAST FOOD -->
     <div class="tab-content" id="chinese">
       <p class="tab-description">"Delicious Indo-Chinese favorites and quick bites with a perfect balance of taste."</p>
       <div class="menu-list">
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Double Ka Meetha</h4>
-              <p>Hyderabadi bread pudding with rabri and dry fruits</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-1">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=300&q=80" alt="Double Ka Meetha">
           </div>
-          <span class="menu-price">₹180</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Double Ka Meetha</h4>
+              <span class="menu-price">₹180</span>
+            </div>
+            <p>Traditional Hyderabadi bread pudding with rabri and dry fruits</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Gulab Jamun</h4>
-              <p>Soft milk dumplings in rose-flavored sugar syrup</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-2">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1584289524095-257a052f5d71?w=300&q=80" alt="Gulab Jamun">
           </div>
-          <span class="menu-price">₹120</span>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Phirni</h4>
-              <p>Creamy rice pudding with saffron and pistachios</p>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Gulab Jamun</h4>
+              <span class="menu-price">₹120</span>
             </div>
+            <p>Soft milk dumplings in rose-flavored sugar syrup</p>
           </div>
-          <span class="menu-price">₹150</span>
         </div>
       </div>
+
     </div>
 
     <!-- DRINKS -->
     <div class="tab-content" id="drinks">
       <p class="tab-description">"Refreshing drinks to complement your meal."</p>
       <div class="menu-list">
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Mango Lassi</h4>
-              <p>Chilled yogurt drink with fresh Alphonso mango</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-1">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1152011116631-0428338989a2?w=300&q=80" alt="Mango Lassi">
           </div>
-          <span class="menu-price">₹120</span>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Mango Lassi</h4>
+              <span class="menu-price">₹120</span>
+            </div>
+            <p>Chilled yogurt drink with fresh Alphonso mango</p>
+          </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Fresh Lime Soda</h4>
-              <p>Sweet or salted, with mint and ginger</p>
-            </div>
+        <div class="menu-item-card glass-panel reveal-up delay-2">
+          <div class="menu-item-img">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=300&q=80" alt="Fresh Lime Soda">
           </div>
-          <span class="menu-price">₹80</span>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Filter Coffee</h4>
-              <p>Traditional South Indian filter coffee</p>
+          <div class="menu-item-details">
+            <div class="menu-item-header">
+              <span class="veg-icon veg">●</span>
+              <h4 class="text-gradient">Fresh Lime Soda</h4>
+              <span class="menu-price">₹80</span>
             </div>
+            <p>Sweet or salted, with mint and ginger</p>
           </div>
-          <span class="menu-price">₹60</span>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <span class="veg-icon veg">●</span>
-            <div>
-              <h4>Virgin Mojito</h4>
-              <p>Mint, lime, and soda with crushed ice</p>
-            </div>
-          </div>
-          <span class="menu-price">₹150</span>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -365,8 +373,8 @@
         <p>Lunch: 11:30 AM – 3:00 PM</p>
         <p>Dinner: 7:00 PM – 11:00 PM</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/ibrizzkitchen/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ibrizzkitchen/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>

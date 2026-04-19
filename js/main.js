@@ -9,8 +9,6 @@
   let current = 0;
   let autoTimer = null;
 
-  // positions relative to center index offset
-  // offset: -2, -1, 0, +1, +2, rest hidden
   const posMap = {
     '-2': 'left2',
     '-1': 'left1',
@@ -22,14 +20,11 @@
   function render() {
     slides.forEach((slide, i) => {
       let offset = i - current;
-      // wrap around
       if (offset > total / 2) offset -= total;
       if (offset < -total / 2) offset += total;
-
       const pos = posMap[String(offset)];
       slide.dataset.pos = pos || (offset > 0 ? 'hidden-right' : 'hidden-left');
     });
-
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
   }
 
@@ -42,7 +37,6 @@
   }
   function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
 
-  // Click on side slides to navigate
   slides.forEach((slide, i) => {
     slide.addEventListener('click', () => {
       const pos = slide.dataset.pos;
@@ -51,12 +45,10 @@
     });
   });
 
-  // Dots
   dots.forEach((d, i) => {
     d.addEventListener('click', () => { current = i; render(); stopAuto(); startAuto(); });
   });
 
-  // Touch/swipe
   let touchStartX = 0;
   carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
   carousel.addEventListener('touchend', e => {
@@ -71,14 +63,14 @@
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
+  if (navbar && window.scrollY > 60) navbar.classList.add('scrolled');
+  else if (navbar) navbar.classList.remove('scrolled');
 });
 
 // Mobile hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
-if (hamburger) {
+if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
   });
@@ -150,23 +142,19 @@ if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === light
 
 // 3D Mouse Tilt Effect
 function initTilt() {
-  const tiltElements = document.querySelectorAll('.about-image, .approach-image, .food-img-wrap, .menu-card-img, .gallery-item, .events-image');
-  
+  // Apply tilt to cards only, not large section images
+  const tiltElements = document.querySelectorAll('.food-img-wrap, .menu-card-img, .gallery-item, .menu-item-img');
   tiltElements.forEach(el => {
     el.addEventListener('mousemove', (e) => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      
       const rotateX = (centerY - y) / 10;
       const rotateY = (x - centerX) / 10;
-      
       el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
     });
-    
     el.addEventListener('mouseleave', () => {
       el.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
     });
@@ -189,30 +177,77 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('reveal');
+      if (entry.target.classList.contains('reveal-up')) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
     }
   });
 }, { 
-  threshold: 0.15,
+  threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
 });
 
-document.querySelectorAll('.menu-card, .value-card, .menu-item, .gallery-item, .img-animate, .section-header, .feature-item').forEach(el => {
-  if (!el.classList.contains('img-animate')) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
+// Apply universal float to some images, and reveal to all images
+document.querySelectorAll('img:not(.logo-img)').forEach(img => {
+  if (!img.closest('.about-image') && !img.closest('.approach-image') && !img.closest('.events-image')) {
+    img.classList.add('floating-anim');
   }
-  revealObserver.observe(el);
+  
+  // also add reveal effect to the image parent if it doesn't have it
+  if(img.parentElement && !img.parentElement.classList.contains('food-slide')) {
+    img.parentElement.classList.add('reveal-up');
+  }
+});
+
+// Add scroll text color effect to section titles
+document.querySelectorAll('.section-title').forEach(title => {
+  title.classList.add('text-reveal-color');
+});
+
+document.querySelectorAll('.menu-card, .value-card, .menu-item, .gallery-item, .img-animate, .section-header, .feature-item, .reveal-up, .menu-item-card, .timeline-item, .menu-item-img, .text-reveal-color').forEach(el => {
+  if (!el.classList.contains('reveal')) {
+    revealObserver.observe(el);
+  }
 });
 
 // Initialize all premium effects
 window.addEventListener('DOMContentLoaded', () => {
+  // Cinematic Splash Logic
+  const splash = document.getElementById('splash-screen');
+  const isSplashShown = sessionStorage.getItem('splashShown');
+
+  if (splash) {
+    if (!isSplashShown) {
+      // First time in this session - show the animation
+      setTimeout(() => {
+        splash.style.opacity = '0';
+        document.body.classList.remove('loading');
+        sessionStorage.setItem('splashShown', 'true');
+        setTimeout(() => splash.remove(), 800);
+      }, 2800);
+    } else {
+      // Already shown in this session (refresh or navigation) - skip the intro completely
+      splash.style.display = 'none';
+      splash.remove();
+      document.body.classList.remove('loading');
+    }
+  }
+
   initTilt();
   initParallax();
-  
-  // Initial reveal trigger
+
+  // Staggered reveal for menu list
+  document.querySelectorAll('.menu-list').forEach(list => {
+    const items = list.querySelectorAll('.menu-item-card');
+    items.forEach((item, idx) => {
+      item.style.transitionDelay = `${idx * 0.1}s`;
+    });
+  });
+
+  // Initial reveal trigger for elements already in view
   setTimeout(() => {
-    document.querySelectorAll('.menu-card, .value-card, .menu-item, .gallery-item, .img-animate, .section-header').forEach(el => {
+    document.querySelectorAll('.reveal-up, .menu-item-card, .timeline-item').forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight) {
         el.classList.add('reveal');
@@ -220,5 +255,5 @@ window.addEventListener('DOMContentLoaded', () => {
         el.style.transform = 'translateY(0)';
       }
     });
-  }, 100);
+  }, 200);
 });

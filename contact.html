@@ -12,7 +12,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
-<body>
+<body class="loading">
+
+  <!-- CINEMATIC SPLASH SCREEN -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <h1 class="splash-logo">IBRIZZ</h1>
+    </div>
+  </div>
+
 
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
@@ -43,67 +51,67 @@
 
   <!-- CONTACT SECTION -->
   <section class="contact-section">
-    <div class="contact-info">
-      <h2 class="section-title">GET IN TOUCH</h2>
+    <div class="contact-info reveal-up">
+      <p class="section-script">Connect</p>
+      <h2 class="section-title text-gradient">GET IN TOUCH</h2>
       <div class="section-divider"></div>
-      <p style="margin-bottom: 2rem; color: #666;">Get in touch with us for orders, bookings, or inquiries. We are
-        always happy to serve you.</p>
-      <div class="contact-detail">
+      
+      <div class="contact-detail glass-panel skew-hover reveal-up delay-1" style="padding: 20px; margin-bottom: 20px;">
         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
         <div>
-          <h4>Address</h4>
-          <p>Ibrizz Kitchen & Stay<br />Ramanathapuram, Tamil Nadu, India</p>
+          <h4>LOCATION</h4>
+          <p>No: 18, LV Prasad Road, Ramanathapuram, Tamil Nadu</p>
         </div>
       </div>
-      <div class="contact-detail">
+      
+      <div class="contact-detail glass-panel skew-hover reveal-up delay-2" style="padding: 20px; margin-bottom: 20px;">
         <div class="contact-icon"><i class="fas fa-phone"></i></div>
         <div>
-          <h4>Phone</h4>
-          <p>+91 [Your Phone Number]<br />+91 [Alternative Number]</p>
+          <h4>CALL US</h4>
+          <p>+91 [Your Phone Number]<br>044 2362 4488</p>
         </div>
       </div>
-      <div class="contact-detail">
+      
+      <div class="contact-detail glass-panel skew-hover reveal-up delay-3" style="padding: 20px; margin-bottom: 20px;">
         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
         <div>
-          <h4>Mail</h4>
-          <p>info@ibrizzkitchen.com</p>
+          <h4>EMAIL FEEDBACK</h4>
+          <p>info@ibrizzkitchen.com<br>support@ibrizzkitchen.com</p>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-        <div>
-          <h4>Opening Hours</h4>
-          <p>Lunch: 11:30 AM – 3:00 PM<br />Dinner: 7:00 PM – 11:00 PM</p>
-        </div>
-      </div>
-      <div class="social-links large">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+      
+      <div class="social-links large reveal-up delay-4">
+        <a href="https://www.facebook.com/ibrizzkitchen/" target="_blank" class="glass-panel"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ibrizzkitchen/" target="_blank" class="glass-panel"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="glass-panel"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
 
-    <div class="contact-form-wrap">
-      <h2 class="section-title">SEND MESSAGE</h2>
-      <div class="section-divider"></div>
-      <div class="contact-form">
-        <input type="text" placeholder="Your name..." id="cName" />
-        <input type="email" placeholder="Email..." id="cEmail" />
-        <input type="tel" placeholder="Phone..." id="cPhone" />
-        <textarea placeholder="Message..." rows="5" id="cMessage"></textarea>
-        <button class="btn-primary full" onclick="sendMessage()">SEND</button>
-        <div class="form-success" id="formSuccess">✓ Message sent successfully! We'll get back to you soon.</div>
-      </div>
+    <div class="contact-form-wrap reveal-up delay-2">
+      <form class="contact-form glass-panel" style="padding: 40px; box-shadow: var(--glass-glow);">
+        <h3 style="margin-bottom: 30px; font-family: var(--font-display); color: var(--gold);">Send a Message</h3>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <input type="text" placeholder="Your Name" class="glass-panel" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <input type="email" placeholder="Email Address" class="glass-panel" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <input type="text" placeholder="Subject" class="glass-panel">
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <textarea placeholder="Your Message" class="glass-panel" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; border: none;">RESERVE NOW</button>
+        <div class="form-success">Message sent successfully!</div>
+      </form>
     </div>
   </section>
 
-  <!-- MAP -->
-  <section class="map-section">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9876543210987!2d80.20980!3d13.05178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267d6a6565e63%3A0x71f1e17db7c1f9c4!2sVadapalani%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+  <section class="map-section reveal-up">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.018259!2d-122.419416!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2c8f8d67%3A0xc6c4d7d490d346e9!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1625070000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);" allowfullscreen="" loading="lazy"></iframe>
   </section>
+
 
   <footer class="footer">
     <div class="footer-grid">
@@ -139,8 +147,8 @@
         <p>Lunch: 11:30 AM – 3:00 PM</p>
         <p>Dinner: 7:00 PM – 11:00 PM</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/ibrizzkitchen/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ibrizzkitchen/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
