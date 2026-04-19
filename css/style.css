@@ -848,21 +848,59 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; position: fixed; top: 0; right: -100%; bottom: 0; width: 260px; background: #0a0a0a; flex-direction: column; padding: 80px 30px 40px; gap: 20px; transition: right 0.3s; z-index: 999; }
+  .nav-links { display: none; position: fixed; top: 0; right: -100%; bottom: 0; width: 260px; background: #0a0a0a; flex-direction: column; padding: 80px 30px 40px; gap: 20px; transition: right 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); z-index: 999; box-shadow: -10px 0 30px rgba(0,0,0,0.8); }
   .nav-links.open { right: 0; display: flex; }
   .hamburger { display: flex; z-index: 1001; }
   .features-strip { flex-wrap: wrap; }
-  .feature-item { flex: 1 0 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
+  .feature-item { flex: 1 0 50%; padding: 15px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: center; }
   .menu-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-section { grid-template-columns: 1fr; gap: 40px; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .values-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .footer-contact p, .footer-hours p, .footer-brand p { justify-content: center; text-align: center; }
+  .social-links { justify-content: center; margin-bottom: 20px; }
+  .values-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .food-slide { width: 180px; height: 180px; }
   .food-slide[data-pos="right1"] { transform: translateX(140px) scale(0.65) translateZ(-50px); }
   .food-slide[data-pos="right2"] { transform: translateX(250px) scale(0.45) translateZ(-100px); }
   .food-slide[data-pos="left1"] { transform: translateX(-140px) scale(0.65) translateZ(-50px); }
   .food-slide[data-pos="left2"] { transform: translateX(-250px) scale(0.45) translateZ(-100px); }
+  .hero-title { font-size: 3.5rem; }
+  .section-title { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .navbar, .navbar.scrolled { padding: 15px 20px; }
+  .logo-name { font-size: 0.9rem; }
+  .logo-img { height: 35px; }
+  .navbar.scrolled .logo-img { height: 30px; }
+  .hero { padding: 100px 15px 50px; }
+  .hero-script { font-size: 2rem; }
+  .hero-title { font-size: 2.6rem; letter-spacing: 5px; }
+  .section-about, .about-main, .approach-section, .values-section, .section-menu, .gallery-section, .menu-section, .contact-section { padding: 50px 20px; }
+  .about-text, .events-content, .approach-text { padding: 30px 10px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .feature-item { flex: 1 0 100%; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .about-image img, .approach-image img, .events-image img { height: 320px; }
+  .about-badge { padding: 12px 18px; font-size: 0.9rem; bottom: 15px; right: -15px; }
+  .timeline-item { flex-direction: column !important; text-align: center !important; gap: 20px !important; margin-bottom: 40px !important; }
+  .timeline-item > div:first-child { text-align: center !important; }
+  .timeline-item > div:nth-child(2) { display: none; } /* Hide the central vertical line on mobile */
+  .timeline-item img { height: 200px !important; }
+  .menu-tabs { flex-direction: column; gap: 8px; width: 100%; }
+  .filter-btn { width: 100%; margin-bottom: 5px; }
+  .gallery-filter { flex-direction: column; gap: 8px; }
+  .tab-btn { width: 100%; text-align: center; }
+  .menu-item { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .menu-price { align-self: flex-start; }
+  .food-carousel-wrap { min-height: 320px; }
+  .food-slide { width: 150px; height: 150px; }
+  .food-slide[data-pos="right1"] { transform: translateX(110px) scale(0.65) translateZ(-50px); }
+  .food-slide[data-pos="right2"] { transform: translateX(200px) scale(0.45) translateZ(-100px); }
+  .food-slide[data-pos="left1"] { transform: translateX(-110px) scale(0.65) translateZ(-50px); }
+  .food-slide[data-pos="left2"] { transform: translateX(-200px) scale(0.45) translateZ(-100px); }
+  .lightbox img { max-width: 95vw; }
 }
 
 /* ======== CINEMATIC SPLASH SCREEN ======== */
