@@ -1208,6 +1208,7 @@ ul { list-style: none; }
   .hero-title { font-size: 2.6rem; letter-spacing: 5px; }
   .section-about, .about-main, .approach-section, .values-section, .section-menu, .gallery-section, .menu-section, .contact-section { padding: 50px 20px; }
   .about-text, .events-content, .approach-text { padding: 30px 15px; margin-left: 0; }
+  .section-about::after, .section-events::after, .values-section::after, .approach-section::after { display: none; }
   .values-grid { grid-template-columns: 1fr; }
   .feature-item { flex: 0 0 auto; border-bottom: none; }
   .gallery-grid { grid-template-columns: 1fr; }
