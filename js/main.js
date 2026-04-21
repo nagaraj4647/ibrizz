@@ -164,12 +164,45 @@ function initTilt() {
 // Parallax Scroll Effect
 function initParallax() {
   window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    document.querySelectorAll('.page-hero, .elite-banner').forEach(bg => {
-      const speed = 0.4;
-      bg.style.backgroundPositionY = -(scrolled * speed) + 'px';
+    document.querySelectorAll('.page-hero').forEach(bg => {
+      const scrolled = window.pageYOffset;
+      const offset = bg.offsetTop;
+      
+      // Only apply parallax when the element is near the viewport
+      if (scrolled + window.innerHeight > offset && scrolled < offset + bg.offsetHeight) {
+        const speed = 0.4;
+        const yPos = -((scrolled - offset) * speed);
+        bg.style.backgroundPositionY = `calc(50% + ${yPos}px)`;
+      }
     });
   });
+}
+
+function initSpotlight() {
+  const eliteBanner = document.querySelector('.elite-banner');
+  const eliteOverlay = document.querySelector('.elite-overlay');
+  
+  if (eliteBanner && eliteOverlay) {
+    eliteBanner.addEventListener('mousemove', (e) => {
+      const rect = eliteBanner.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Update BOTH for maximum compatibility
+      eliteBanner.style.setProperty('--x', `${x}px`);
+      eliteBanner.style.setProperty('--y', `${y}px`);
+      eliteOverlay.style.setProperty('--x', `${x}px`);
+      eliteOverlay.style.setProperty('--y', `${y}px`);
+    });
+    
+    // Reset spotlight when mouse leaves
+    eliteBanner.addEventListener('mouseleave', () => {
+      eliteBanner.style.setProperty('--x', `-1000px`);
+      eliteBanner.style.setProperty('--y', `-1000px`);
+      eliteOverlay.style.setProperty('--x', `-1000px`);
+      eliteOverlay.style.setProperty('--y', `-1000px`);
+    });
+  }
 }
 
 // Scroll reveal animation
@@ -205,7 +238,7 @@ document.querySelectorAll('.section-title').forEach(title => {
   title.classList.add('text-reveal-color');
 });
 
-document.querySelectorAll('.menu-card, .value-card, .menu-item, .gallery-item, .img-animate, .section-header, .feature-item, .reveal-up, .menu-item-card, .timeline-item, .menu-item-img, .text-reveal-color').forEach(el => {
+document.querySelectorAll('.menu-card, .value-card, .menu-item, .gallery-item, .img-animate, .section-header, .feature-item, .reveal-up, .reveal-left, .reveal-right, .menu-item-card, .timeline-item, .menu-item-img, .text-reveal-color, .reveal-stagger').forEach(el => {
   if (!el.classList.contains('reveal')) {
     revealObserver.observe(el);
   }
@@ -236,6 +269,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initTilt();
   initParallax();
+  initSpotlight();
 
   // Staggered reveal for menu list
   document.querySelectorAll('.menu-list').forEach(list => {
@@ -247,12 +281,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Initial reveal trigger for elements already in view
   setTimeout(() => {
-    document.querySelectorAll('.reveal-up, .menu-item-card, .timeline-item').forEach(el => {
+    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .menu-item-card, .timeline-item').forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight) {
         el.classList.add('reveal');
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
       }
     });
   }, 200);

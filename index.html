@@ -142,51 +142,76 @@
 
   </section>
 
-  <!-- FEATURES STRIP -->
+  <!-- FEATURES STRIP (RUNNING MARQUEE) -->
   <section class="features-strip">
-    <div class="feature-item">
-      <i class="fas fa-utensils"></i>
-      <span>Authentic Flavors</span>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-bed"></i>
-      <span>Luxury Stay</span>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-glass-cheers"></i>
-      <span>Event Hosting</span>
-    </div>
-    <div class="feature-item">
-      <i class="fas fa-heart"></i>
-      <span>Family Friendly</span>
+    <div class="features-track">
+      <div class="feature-item">
+        <i class="fas fa-utensils"></i>
+        <span>Authentic Flavors</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-bed"></i>
+        <span>Luxury Stay</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-glass-cheers"></i>
+        <span>Event Hosting</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-heart"></i>
+        <span>Family Friendly</span>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="feature-item">
+        <i class="fas fa-utensils"></i>
+        <span>Authentic Flavors</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-bed"></i>
+        <span>Luxury Stay</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-glass-cheers"></i>
+        <span>Event Hosting</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-heart"></i>
+        <span>Family Friendly</span>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT SECTION -->
   <section class="section-about">
-    <div class="about-image img-animate">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80" alt="About Ibrizz Kitchen"/>
-      <div class="about-badge">EST. 2018</div>
+    <div class="about-image img-animate reveal-left">
+      <div class="image-slideshow slider-6">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" class="slide" alt="Ibrizz Interior"/>
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" class="slide" alt="Chef Cooking"/>
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80" class="slide" alt="Dining Room"/>
+        <img src="https://images.unsplash.com/photo-1581014139844-24c56be4a845?w=800&q=80" class="slide" alt="Kitchen Prep"/>
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&q=80" class="slide" alt="Stay Experience"/>
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" class="slide" alt="Plating"/>
+      </div>
     </div>
-    <div class="about-text">
+    <div class="about-text reveal-right">
       <p class="section-script">Our Story</p>
       <h2 class="section-title">WELCOME TO IBRIZZ KITCHEN</h2>
       <div class="section-divider"></div>
-      <p>Ibrizz Kitchen is a well-known multi-cuisine restaurant in Ramanathapuram, offering a perfect blend of delicious food and quality hospitality. Established around 2018, we serve a wide variety of dishes including authentic South Indian meals, flavorful biryanis, Chinese cuisine, and grilled specialties.</p>
-      <p>Beyond dining, we also provide comfortable hotel accommodations, banquet halls for events, outdoor lawn spaces, and catering services. Whether you're visiting with family or planning a special occasion, we ensure a memorable experience.</p>
+      <p class="reveal-up">Ibrizz Kitchen is a well-known multi-cuisine restaurant in Ramanathapuram, offering a perfect blend of delicious food and quality hospitality. Established around 2018, we serve a wide variety of dishes including authentic South Indian meals, flavorful biryanis, Chinese cuisine, and grilled specialties.</p>
+      <p class="reveal-up">Beyond dining, we also provide comfortable hotel accommodations, banquet halls for events, outdoor lawn spaces, and catering services. Whether you're visiting with family or planning a special occasion, we ensure a memorable experience.</p>
       <a href="about.html" class="btn-outline">Read More</a>
     </div>
   </section>
 
   <!-- MENU PREVIEW -->
   <section class="section-menu">
-    <div class="section-header">
+    <div class="section-header reveal-up">
       <p class="section-script">Our Specialties</p>
       <h2 class="section-title">SIGNATURE DISHES</h2>
       <div class="section-divider center"></div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card">
+      <div class="menu-card reveal-up" style="transition-delay: 0.1s;">
         <div class="menu-card-img">
           <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80" alt="Biryani"/>
           <div class="menu-tag">Chef's Special</div>
@@ -197,7 +222,7 @@
           <span class="price">₹380</span>
         </div>
       </div>
-      <div class="menu-card featured">
+      <div class="menu-card featured reveal-up" style="transition-delay: 0.3s;">
         <div class="menu-card-img">
           <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=80" alt="Prawn"/>
           <div class="menu-tag">Popular</div>
@@ -208,7 +233,7 @@
           <span class="price">₹520</span>
         </div>
       </div>
-      <div class="menu-card">
+      <div class="menu-card reveal-up" style="transition-delay: 0.5s;">
         <div class="menu-card-img">
           <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Dessert"/>
           <div class="menu-tag">Dessert</div>
@@ -220,7 +245,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center">
+    <div class="text-center reveal-up">
       <a href="menu.html" class="btn-primary">View Full Menu</a>
     </div>
   </section>
@@ -228,21 +253,28 @@
   <!-- SPECIAL EVENTS -->
   <section class="section-events">
     <div class="events-image img-animate">
-      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80" alt="Special Events"/>
+      <div class="image-slideshow slider-6">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" class="slide" alt="Restaurant Dining"/>
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" class="slide" alt="Hotel Stay"/>
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80" class="slide" alt="Banquet Hall"/>
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800&q=80" class="slide" alt="Outdoor Lawn"/>
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80" class="slide" alt="Catering Services"/>
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" class="slide" alt="Corporate Meetings"/>
+      </div>
     </div>
     <div class="events-content">
       <p class="section-script">Services</p>
       <h2 class="section-title">OUR PREMIUM SERVICES</h2>
       <div class="section-divider"></div>
       <ul class="events-list">
-        <li><i class="fas fa-circle"></i> Restaurant Dining</li>
-        <li><i class="fas fa-circle"></i> Hotel Stay (AC Rooms)</li>
-        <li><i class="fas fa-circle"></i> Banquet Hall</li>
-        <li><i class="fas fa-circle"></i> Outdoor Lawn</li>
-        <li><i class="fas fa-circle"></i> Catering Services</li>
-        <li><i class="fas fa-circle"></i> Corporate Meetings</li>
+        <li class="reveal-stagger"><i class="fas fa-circle"></i> Restaurant Dining</li>
+        <li class="reveal-stagger"><i class="fas fa-circle"></i> Hotel Stay (AC Rooms)</li>
+        <li class="reveal-stagger"><i class="fas fa-circle"></i> Banquet Hall</li>
+        <li class="reveal-stagger"><i class="fas fa-circle"></i> Outdoor Lawn</li>
+        <li class="reveal-stagger"><i class="fas fa-circle"></i> Catering Services</li>
+        <li class="reveal-stagger"><i class="fas fa-circle"></i> Corporate Meetings</li>
       </ul>
-      <p>Whether it's a casual meal or a grand celebration, we provide the perfect venue for your needs.</p>
+      <p class="reveal-up">Whether it's a casual meal or a grand celebration, we provide the perfect venue for your needs.</p>
       <a href="contact.html" class="btn-outline">Contact Us</a>
     </div>
   </section>
