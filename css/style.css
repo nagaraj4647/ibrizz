@@ -185,7 +185,7 @@ ul { list-style: none; }
   text-shadow: 0 0 60px rgba(200,132,58,0.25);
 }
 .hero-divider {
-  display: flex; align-items: center; gap: 14px;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
   margin: 18px 0; color: var(--gold);
 }
 .hero-divider span { display: block; width: 60px; height: 1px; background: var(--gold); }
